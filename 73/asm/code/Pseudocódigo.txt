@@ -1,0 +1,14 @@
+BirthdayCI(array):
+
+	D <- array[4]*10 + array[5]
+	M <- array[2]*10 + array[3]
+	Y <- array[0]*10 + array[1]
+
+	if Y > 24 
+		Y <- Y + 1900
+	else:
+		Y <- Y + 2000
+	print(f"{D} {M} {Y}")
+
+
+		
