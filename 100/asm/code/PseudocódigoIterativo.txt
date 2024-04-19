@@ -1,0 +1,19 @@
+LevenshteinBits(L1,L2,len1,len2)
+	P<-0
+	Op<-0
+	T1<-len1
+	T2<-len2
+	while P < T1 & P < T2
+		A<-L1[P]
+		B<-L2[P]
+		if(A==B)
+			P<-P+1
+		else
+			P<-P+1
+			Op<-Op+1
+	
+	if T1 > T2
+		Op <- Op + T1 - P 
+	else
+		Op <- Op + T2 - P
+	print(Op)

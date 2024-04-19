@@ -1,0 +1,18 @@
+#Recursivo
+LevenshteinBits(L1, L2, len1, len2, operations = 0, pos = 0)
+{
+    if pos < len1 & pos < len2  
+        if L1[pos] == L2[pos]
+            return LevenshteinBits(L1, L2, len1, len2, operations, pos + 1);
+        
+        else         
+            return LevenshteinBits(L1, L2, len1, len2, operations + 1, pos + 1); 
+                    
+    else 
+	  if len2 > len1    
+    	    return operations + len2 - pos;
+    
+    	  if  len1 > len2
+	    return operations + len1 - pos;
+    return operations;
+}
